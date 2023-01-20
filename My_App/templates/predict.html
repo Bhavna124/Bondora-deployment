@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .main{
+            position: fixed;
+            top: 140px;
+            left: 410px;
+            width: 550px;
+            background-color:#ffffff;
+            border-radius: 10px;
+            align-items: center;
+            padding: 5%;
+        }
+        h1{
+            color: #0086b3;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        input[type=submit]{
+            background-color: #4dc3ff;
+            border: 2px;
+            color: white;
+            padding: 8px 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1> Welcome to the Prediction </h1>
+    <div align="center" class="main">
+        <h1>Please Enter the Required Details</h1>
+        <form action="result">
+            <table>
+                <tr>
+                    <td align="right" >Principal Balance</td>
+                    <td align="left"> <input type="text"  required name="n1" </td> 
+
+                    <tr>
+                    <td align="right" >Amount</td>
+                    <td align="left"> <input type="text" required name="n2"</td>
+                    </tr>
+
+                    <tr>
+                    <td align="right" >PreviousRepaymentsBeforeLoan</td>
+                    <td align="left"> <input type="text"  required name="n3" </td>
+                    </tr> 
+                    
+                    <tr>
+                        <td align="right" >MonthlyPayment</td>
+                        <td align="left"> <input type="text"  required name="n4" </td>
+                        </tr>  
+                        
+                    <tr>
+                    <td align="right" >AppliedAmount</td>
+                    <td align="left"> <input type="text" required name="n5"</td>
+                    </tr>
+                
+                </tr>
+            </table>
+            <input type="submit">
+        </form>
+        Result:{{result2}}
+
+
+    </div>
+
+    
+    <a href="{% url 'predict' %}" >
+        <button type="button"  align="center" class="btn btn-primary"> Reset Filled  Data</button>
+    </a>
+
+    
+</body>
+</html>
